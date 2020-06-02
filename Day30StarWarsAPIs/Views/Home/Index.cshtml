@@ -1,0 +1,20 @@
+﻿@model List<Person>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <form action="/People/Index" method="POST">
+        Person: 
+        <select name="personURL">
+            @foreach (Person p in Model)
+            {
+                <option value="@p.url.ToString()">@p.name</option>
+            }
+        </select>
+        <input type="submit" />
+    </form>
+
+<form action="/Planets/Index" method="POST">
+    Planet ID: <input type="text" name="planetID" value="" />
+    <input type="submit" />
+</form>

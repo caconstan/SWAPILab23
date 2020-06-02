@@ -1,0 +1,104 @@
+﻿@model Day30StarWarsAPIs.Models.Planet
+
+@{
+    ViewData["Title"] = "Planet Index";
+}
+
+@if (Model == null)
+{
+    <div>
+        <h4>Planet #@ViewBag.planetID does not exist.</h4>
+
+        <span>
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Back To Home</a>
+        </span>
+    </div>
+}
+else
+{
+    <div>
+        <div>
+            <h4>Planet #@ViewBag.planetID</h4>
+
+            <span>
+                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Back To Home</a>
+            </span>
+        </div>
+
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.rotation_period)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.rotation_period)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.orbital_period)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.orbital_period)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.diameter)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.diameter)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.climate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.climate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.gravity)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.gravity)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.terrain)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.terrain)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.surface_water)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.surface_water)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.population)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.population)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.created)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.created)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.edited)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.edited)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.url)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.url)
+            </dd>
+        </dl>
+    </div>
+}
